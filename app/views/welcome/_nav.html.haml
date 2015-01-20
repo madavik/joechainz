@@ -1,0 +1,154 @@
+:css
+  *, :before, :after {
+    box-sizing: border-box;
+  }
+
+  .unstyled {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .unstyled a {
+    text-decoration: none;
+  }
+
+  .list-inline {
+    overflow: hidden;
+  }
+  .list-inline li {
+    float: left;
+  }
+
+  .header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 20%;
+    background: #7d7d7d;
+  }
+
+  .logo {
+    text-transform: lowercase;
+    font: 300 2em "Source Sans Pro", Helvetica, Arial, sans-serif;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+  .logo a {
+    display: block;
+    padding: 1em 0;
+    color: #DFDBD9;
+    text-decoration: none;
+    transition: .15s linear color;
+  }
+  .logo a:hover {
+    color: #fff;
+  }
+  .logo a:hover span {
+    color: #ff4040;
+  }
+  .logo span {
+    font-weight: 700;
+    transition: .15s linear color;
+  }
+
+  .main-nav ul {
+    border-top: solid 1px #3C3735;
+  }
+  .main-nav li {
+    border-bottom: solid 1px #3C3735;
+  }
+  .main-nav a {
+    padding: 1.1em 0;
+    color: #DFDBD9;
+    font: 400 1.125em "Source Sans Pro", Helvetica, Arial, sans-serif;
+    text-align: center;
+    text-transform: lowercase;
+  }
+  .main-nav a:hover {
+    color: #fff;
+  }
+
+  .social-links {
+    border-bottom: solid 1px #3C3735;
+  }
+  .social-links li {
+    width: 25%;
+    border-left: solid 1px #3C3735;
+  }
+  .social-links li:first-child {
+    border: none;
+  }
+  .social-links a {
+    display: block;
+    height: 5.5em;
+    text-align: center;
+    color: #3C3735;
+    font: 0.75em/5.5em "Source Sans Pro", Helvetica, Arial, sans-serif;
+  }
+  .social-links a:hover {
+    color: #DFDBD9;
+  }
+
+  .list-hover-slide li {
+    position: relative;
+    overflow: hidden;
+  }
+  .list-hover-slide a {
+    display: block;
+    position: relative;
+    z-index: 1;
+    transition: .35s ease color;
+  }
+  .list-hover-slide a:before {
+    content: '';
+    display: block;
+    z-index: -1;
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-right: solid 5px #ff4040;
+    background: #4b4b4b;
+    transition: .35s ease left;
+  }
+  .list-hover-slide a.is-current:before, .list-hover-slide a:hover:before {
+    left: 0;
+  }
+
+%header.header{:role=>"banner"}
+  %h1.logo
+    %a{:href=>"/"}
+      Joe_chainz
+      %span
+        Unchained
+  .nav-wrap
+    %nav.main-nav{:role=>"navigation"}
+      %ul.unstyled.list-hover-slide
+        %li
+          %a{:href=>"/team"}
+            Team
+        %li
+          %a{:href=>"#"}
+            Work
+        %li
+          %a{:href=>"#"}
+            Contact
+        %li
+          %a{:href=>"/creed"}
+            Creed
+    %ul.social-links.list-inline.unstyled.list-hover-slide
+      %li
+        %a{:href=>"https://twitter.com/joe_chainz"}
+          Twitter
+      %li
+        %a{:href=>"http://instagram.com/joe_chainz/"}
+          Insta
+      %li
+        %a{:href=>"https://github.com/madavik"}
+          GitHub
+      %li
+        %a{:href=>"http://codepen.io/madavik/"}
+          CodePen

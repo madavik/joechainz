@@ -1,0 +1,510 @@
+:scss
+  @import url("http://fonts.googleapis.com/css?family=Raleway:400,100,300,200,500,600,700,800,900");
+  @import url("http://fonts.googleapis.com/css?family=Roboto:400,300,100,100italic,300italic,400italic,500,500italic,700,700italic,900,900italic");
+  @import url("http://weloveiconfonts.com/api/?family=entypo");
+  [class*="entypo-"]:before {
+    font-family: 'entypo',sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin-left: 20%;
+    width: 80%;
+    background: #fafafa;
+    font-family: 'Raleway',sans-serif;
+    padding: 0px 40px;
+  }
+  body .diamonds {
+    font-size: 0;
+    margin: 40px auto;
+  }
+  .csstransforms body .diamonds {
+    padding: 39px 0;
+  }
+  body .diamonds .user {
+    -webkit-transition: margin 1s ease-in-out;
+    -moz-transition: margin 1s ease-in-out;
+    transition: margin 1s ease-in-out;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-size: 18px;
+    left: 70px;
+    margin-right: 110px;
+    position: relative;
+    z-index: 1;
+    width: 222px;
+    height: 222px;
+  }
+  .csstransforms body .diamonds .user {
+    overflow: hidden;
+    transform: rotate(-45deg);
+  }
+  body .diamonds .user:hover .diamond .content:before {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    font-size: 48px;
+    left: 39%;
+    top: 10%;
+  }
+  body .diamonds .user:hover .diamond .content .description {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    transform: rotateY(0deg);
+  }
+  body .diamonds .user:hover .diamond .content .title {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    top: 75px;
+  }
+  body .diamonds .user .diamond {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background: rgba(102, 102, 102, 0.1);
+    color: #fff;
+    display: block;
+    height: 222px;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    transform: rotateX(0deg);
+    transform-style: preserve-3d;
+    width: 222px;
+    left: 0px;
+    top: 0px;
+  }
+  body .diamonds .user .diamond .content {
+    display: block;
+    height: 222px;
+    padding: 0 0px;
+    transform: rotate(45deg);
+    width: 222px;
+    z-index: 2;
+  }
+  body .diamonds .user .diamond .content:before {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    font-size: 150px;
+    left: 37px;
+    position: absolute;
+    text-align: center;
+    top: 27.75px;
+    vertical-align: center;
+  }
+  body .diamonds .user .diamond .content .title {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    display: block;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0 auto;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    top: 95px;
+    vertical-align: middle;
+    width: 100%;
+    z-index: 5;
+    z-index: 1000;
+  }
+  body .diamonds .user .diamond .description {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    display: table-cell;
+    padding: 0px 10px;
+    position: absolute;
+    top: 110px;
+    transform: rotateY(180deg);
+    vertical-align: middle;
+  }
+  body .diamonds.users .user {
+    z-index: 1;
+    animation: leftreturn ease-in-out .3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    /*when the spec is finished*/
+  }
+  body .diamonds.users .user .diamond .content .title, body .diamonds.users .user .diamond .content .description {
+    background: #fafafa;
+    color: #000;
+    opacity: .8;
+  }
+  body .diamonds.users .user .diamond .content img {
+    width: 320px;
+    height: 320px;
+    position: absolute;
+    top: -50px;
+    left: -50px;
+  }
+  body .diamonds.users .user.on {
+    position: fixed;
+    z-index: 11;
+    animation: skydrop ease-in-out .3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    /*when the spec is finished*/
+    margin: 0px;
+  }
+  body .diamonds.users .user.on .content .title, body .diamonds.users .user.on .content .description {
+    opacity: 0;
+  }
+  body .diamonds.users .userinfo {
+    opacity: 0px;
+    z-index: 0;
+    display: block;
+    position: absolute;
+    top: 360px;
+    left: -50%;
+    max-width: 600px;
+    margin: 0 0 20px -300px;
+    background: white;
+    padding: 10px 40px 40px;
+    -webkit-transition: all 0.3s ease-in 0s;
+    -moz-transition: all 0.3s ease-in 0s;
+    transition: all 0.3s ease-in 0s;
+  }
+  body .diamonds.users .userinfo h1, body .diamonds.users .userinfo h2, body .diamonds.users .userinfo .longdesc {
+    text-align: center;
+    z-index: 30;
+    display: block;
+  }
+  body .diamonds.users .userinfo h1 {
+    text-transform: uppercase;
+    font-size: 36px;
+    line-height: .6em;
+  }
+  body .diamonds.users .userinfo h2 {
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: .6em;
+  }
+  body .diamonds.users .userinfo h3 {
+    text-transform: uppercase;
+    font-size: 18px;
+  }
+  body .diamonds.users .userinfo .longdesc {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    margin: auto;
+    text-align: center;
+  }
+  body .diamonds.users .userinfo ul {
+    display: block;
+    font-size: 14px;
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+  body .diamonds.users .userinfo ul li {
+    font-size: 14px;
+    color: black;
+    display: block;
+    padding: 5px 0;
+  }
+  body .diamonds.users .userinfo ul li:first-child {
+    padding: 0px 0px 5px;
+  }
+  body .diamonds.users .userinfo ul li.current {
+    font-weight: 800;
+  }
+  body .diamonds.users .userinfo ul li.current:after {
+    content: " (Current Project)";
+    font-weight: 400;
+    font-size: 12px;
+  }
+  body .diamonds.users .userinfo.on {
+    opacity: 1;
+    z-index: 30;
+    left: 50%;
+    -webkit-transition: all 0.3s ease-in 0.5s;
+    -moz-transition: all 0.3s ease-in 0.5s;
+    transition: all 0.3s ease-in 0.5s;
+  }
+
+  #userbg {
+    background: #fff100;
+    display: block;
+    height: 100%;
+    width: 100%;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: all 0.3s ease-in 0.3s;
+    -moz-transition: all 0.3s ease-in 0.3s;
+    transition: all 0.3s ease-in 0.3s;
+    position: fixed;
+    top: -1000px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 0;
+    font-size: 20px;
+    padding: 40px;
+  }
+  #userbg .close {
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fafafa;
+    border-radius: 100%;
+    padding: 5px;
+    height: 30px;
+    width: 30px;
+    font-weight: 300;
+    line-height: 16px;
+    text-indent: 5px;
+    z-index: 10;
+  }
+  #userbg.on {
+    top: 0px;
+    z-index: 10;
+    -webkit-transition: all 0.3s ease-in 0s;
+    -moz-transition: all 0.3s ease-in 0s;
+    transition: all 0.3s ease-in 0s;
+  }
+
+  @media only screen and (min-width: 0px) and (max-width: 760px) and (orientation: landscape) {
+    body .diamonds > .user:nth-of-type(n+2) {
+      clear: left;
+      margin-top: 110px;
+    }
+  }
+  @media only screen and (min-width: 761px) and (max-width: 1085px) and (orientation: landscape) {
+    body .diamonds > .user:nth-of-type(3n) {
+      margin-left: 165px;
+    }
+    body .diamonds > .user:nth-of-type(n+3) {
+      margin-top: -50px;
+    }
+    body .diamonds > .user:nth-of-type(3n+4) {
+      clear: left;
+    }
+  }
+  @media only screen and (min-width: 1086px) and (max-width: 1224px) and (orientation: landscape) {
+    body .diamonds > .user:nth-of-type(5n+4) {
+      margin-left: 165px;
+    }
+    body .diamonds > .user:nth-of-type(n+4) {
+      margin-top: -50px;
+    }
+  }
+  @media only screen and (min-width: 1224px) and (max-width: 1408px) {
+    body .diamonds > .user:nth-of-type(5n+4) {
+      margin-left: 165px;
+    }
+    body .diamonds > .user:nth-of-type(n+4) {
+      margin-top: -50px;
+    }
+    body .diamonds > .user:nth-of-type(5n+6) {
+      clear: left;
+    }
+  }
+  @media only screen and (min-width: 1408px) {
+    .diamonds .user:nth-of-type(7n+5) {
+      margin-left: 167px;
+    }
+    .diamonds .user:nth-of-type(n+5) {
+      margin-top: -50px;
+    }
+  }
+  @keyframes skydrop {
+    0% {
+      left: 50%;
+      top: -1000px;
+      opacity: 0;
+      margin-left: -110px;
+      transform: rotate(-45deg) scaleX(1) scaleY(1) skewX(0deg) skewY(0deg);
+    }
+    100% {
+      left: 50%;
+      top: 70px;
+      opacity: 1;
+      margin-left: -110px;
+      transform: rotate(-45deg) scaleX(1) scaleY(1) skewX(0deg) skewY(0deg);
+    }
+  }
+  @keyframes leftreturn {
+    from {
+      -webkit-transform: rotate(-45deg) scale(1) skew(1deg) translate(-1000px);
+    }
+    to {
+      -webkit-transform: rotate(-45deg) scale(1) skew(1deg) translate(0px);
+    }
+  }
+
+= render partial: 'nav'
+.diamonds.users
+  #userbg
+    .close x
+  %article#user1.user
+    %a.diamond
+      .content
+        %img{:src=>"https://pbs.twimg.com/profile_images/1091562021/me-small.png"}
+        .title
+          Roy Kolak
+        .description
+          General Layabout
+  %section#user1Info.userinfo
+    %h1
+      Roy Kolak
+    %h2
+      General Layabout
+    .longdesc
+      Watch out for this guy! He will steal all of your waffles & NyQuil™! He generally has a bad attitude which he refers to as his 'Tude'. He runs a candy shoppe and a pet emporium out of his apartment.
+    %h3
+      Projects
+    %ul
+      %li.current
+        Farts
+      %li
+        Fart Noises
+      %li
+        Jokes about farts
+    %h3
+      Education
+    %ul
+      %li
+        Grade school
+  %article#user2.user
+    %a.diamond
+      .content
+        %img{:src=>"https://pbs.twimg.com/profile_images/378800000261152356/7e2a04dcfa56ef0eba6501be2bd521b6.jpeg"}
+        .title
+          Tom Kersten
+        .description
+          Chief Sh*thead
+  %section#user2Info.userinfo
+    %h1
+      Tom Kersten
+    %h2
+      Chief Sh*thead
+    .longdesc
+      Oh, this guy? Man... who invited him? Notorious for falling asleep on trains, Tom will never leave a party before 10:18pm.
+    %h3
+      Projects
+    %ul
+      %li.current
+        Farts
+      %li
+        Fart Noises
+      %li
+        Jokes about farts
+    %h3
+      Education
+    %ul
+      %li
+        Grade school
+  %article#user3.user
+    %a.diamond
+      .content
+        %img{:src=>"https://pbs.twimg.com/profile_images/501123527484112898/vvN5fIcZ.jpeg"}
+        .title
+          Pete Nawara
+        .description
+          Sandwich Artist
+  %section#user3Info.userinfo
+    %h1
+      Pete Nawara
+    %h2
+      Sandwich Artist
+    .longdesc
+      Spending most of his time locked away in his studio space, he can occasionally be found running around Logan Square covered in paint and drinking colored coffee with brushes.
+    %h3
+      Projects
+    %ul
+      %li.current
+        Farts
+      %li
+        Fart Noises
+      %li
+        Jokes about farts
+    %h3
+      Education
+    %ul
+      %li
+        Grade school
+  %article#user3.user
+    %a.diamond
+      .content
+        %img{:src=>"https://pbs.twimg.com/profile_images/501123527484112898/vvN5fIcZ.jpeg"}
+        .title
+          Pete Nawara
+        .description
+          Sandwich Artist
+  %section#user3Info.userinfo
+    %h1
+      Pete Nawara
+    %h2
+      Sandwich Artist
+    .longdesc
+      Spending most of his time locked away in his studio space, he can occasionally be found running around Logan Square covered in paint and drinking colored coffee with brushes.
+    %h3
+      Projects
+    %ul
+      %li.current
+        Farts
+      %li
+        Fart Noises
+      %li
+        Jokes about farts
+    %h3
+      Education
+    %ul
+      %li
+        Grade school
+:javascript
+  //diamonds
+
+  var timeout = null
+  $('.diamond').click(function() {
+    var $diamond = $(this)
+    var $diamondParent = $diamond.parent()
+    clearTimeout(timeout)
+    $('#userbg').toggleClass("on");
+    $('.user, .userinfo').not(this).parent().removeClass("on");
+
+    timeout = setTimeout(function() {
+      $diamondParent.toggleClass('on')
+      clearTimeout(timeout)
+    }, 300);
+    $diamondParent.next('.userinfo').toggleClass("on");
+
+  });
+
+  $(".close").click(function () {
+      $(".user, .userinfo, #userbg").removeClass("on");
+    });
+
+
+  /*
+   think the list page would be kind of like wha tyou have.
+
+  tomkersten [11:40]
+  on an employee page...useful info may be: projects they've lead, current (maybe...not sure how to denote this), umm...summary. education. list of publications, patents...
+
+  tomkersten [11:40]
+  umm...start date. (years of experience)
+
+  tomkersten [11:40]
+  also...woud like to have an "alumni" seciton.
+
+  tomkersten [11:40]
+  or...list of some sort.*/
